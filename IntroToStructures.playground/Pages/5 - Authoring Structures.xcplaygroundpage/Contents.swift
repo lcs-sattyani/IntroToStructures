@@ -55,7 +55,44 @@ struct Circle {
         
     }
 
+    // Create a rectangle instance
+var circle = Circle(radius: 7.0)
+
+    // Report on the area?
+print(circle.description)
+
+
+
+
+struct Parallelogram {
+    //Properties
     
-/*:
- [Previous: Area Example - Rectangle](@previous) | Page 4
- */
+    var base: Double
+    var side: Double
+    var height:Double
+    
+    // Computed property for perimeter
+    var perimeterParallelogram: Double {
+        return 2*(base+side)
+        
+    }
+    
+    //Computed property for area
+    var areaParallelogram: Double {
+        return (base*height)
+    }
+     var description: String {
+            return "The area of the Parallelogram is " + String(format: "%.1f", areaParallelogram) + "and the parameter is " + String(format: "%.1f",perimeterParallelogram)
+        
+        }
+        
+    }
+
+    // Create a rectangle instance
+var parallelogram = Parallelogram(base: 5.0, side: 5.0, height: 5.0)
+
+    // Report on the area?
+print(parallelogram.description)
+
+
+    
