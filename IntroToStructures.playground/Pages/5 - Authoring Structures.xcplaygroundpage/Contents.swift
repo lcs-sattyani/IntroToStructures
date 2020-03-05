@@ -95,4 +95,38 @@ var parallelogram = Parallelogram(base: 5.0, side: 5.0, height: 5.0)
 print(parallelogram.description)
 
 
-    
+    struct Sphere  {
+        //Properties
+        
+        var radius: Double
+     
+      
+        
+        // Computed property for perimeter
+        var surafaceAreaSphere: Double {
+            return  4*Double.pi*pow(radius,2.0)
+        }
+        
+        //Computed property for area
+        var volumeSphere: Double {
+            return 4*Double.pi*pow(radius,3.0)/3
+        }
+         var description: String {
+                return "The Surface Area of the cone is " + String(format: "%.1f", surafaceAreaSphere) + "and the volume is " + String(format: "%.1f",volumeSphere)
+            
+            }
+            
+        }
+
+        // Create a rectangle instance
+    var sphere = Sphere (radius: 5.0)
+
+        // Report on the area?
+    print(sphere.description)
+
+
+
+    /*:
+     [Previous: Area Example - Rectangle](@previous) | Page 4
+     */
+
